@@ -6,6 +6,7 @@ import com.adil.movielist.repository.NetworkCallRepo
 import com.adil.movielist.viewModel.MovieDetailsViewModel
 import com.adil.movielist.viewModel.MovieListViewModel
 
+@Suppress("UNCHECKED_CAST")
 class ViewModelFactory(private val repository: BaseRepository) :
     ViewModelProvider.NewInstanceFactory() {
 

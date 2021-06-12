@@ -53,15 +53,11 @@ class CustomMoviesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return if (moviesList[position] == null) VIEW_TYPE_LOADING else VIEW_TYPE_ITEM
     }
 
-    fun setData(newMoviesList: ArrayList<Search?>) {
-        if (newMoviesList != null) {
-            if (moviesList.isNotEmpty())
-                moviesList.removeAt(moviesList.size - 1)
-            moviesList.clear()
-            moviesList.addAll(newMoviesList)
-        } else {
-            moviesList.add(newMoviesList)
-        }
+    fun setData(newMoviesList: List<Search?>) {
+        if (moviesList.isNotEmpty())
+            moviesList.removeAt(moviesList.size - 1)
+        moviesList.clear()
+        moviesList.addAll(newMoviesList)
         notifyDataSetChanged()
     }
 
@@ -89,6 +85,4 @@ class CustomMoviesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             progressBar.visible(true)
         }
     }
-
-
 }

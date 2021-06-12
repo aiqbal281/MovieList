@@ -82,9 +82,9 @@ class MovieListViewModel(private val networkCallRepo: NetworkCallRepo) : BaseVie
         }
     }
 
-    fun searchMovie(query: String, context: Context) {
+    fun searchMovie(movieName: String, context: Context) {
         this.mContext = context
-        _movieNameLiveData.value = query
+        _movieNameLiveData.value = movieName
         pageIndex = 1
         totalMovies = 0
         getMovieList()

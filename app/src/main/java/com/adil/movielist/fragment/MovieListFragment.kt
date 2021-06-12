@@ -29,8 +29,9 @@ import kotlinx.android.synthetic.main.fragment_movie_list.*
 class MovieListFragment :
     BaseFragment<MovieListViewModel, FragmentMovieListBinding, NetworkCallRepo>() {
 
-    lateinit var movieList: ArrayList<Search?>
+    lateinit var movieList: List<Search?>
     private var isConnected: Boolean = false
+    private var movieName = "Batman"
 
     private lateinit var customMoviesAdapter: CustomMoviesAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,7 +43,7 @@ class MovieListFragment :
     }
 
     private fun initObserver() {
-        viewModel.searchMovie("Batman", requireContext())
+        viewModel.searchMovie(movieName, requireContext())
         viewModel.movieNameLiveData.observe(viewLifecycleOwner, Observer {
             Log.i("Info", "Movie Name = $it")
         })
@@ -93,7 +94,7 @@ class MovieListFragment :
                         override fun onItemClick(view: View, position: Int) {
                             if (isConnected) {
                                 var bundle = bundleOf(
-                                    "id" to movieList[position]!!.imdbID
+                                    "id" to customMoviesAdapter.getData()[position]!!.imdbID
                                 )
                                 val movieDetailsFragment = MovieDetailsFragment()
                                 movieDetailsFragment.arguments = bundle
@@ -138,7 +139,8 @@ class MovieListFragment :
             override fun onQueryTextSubmit(query: String): Boolean {
                 requireContext().dismissKeyboard(binding.searchView)
                 searchView.clearFocus()
-                viewModel.searchMovie(query, requireContext())
+                movieName = query
+                viewModel.searchMovie(movieName, requireContext())
                 return true
             }
 
@@ -150,7 +152,7 @@ class MovieListFragment :
 
     private fun fetchDataFromDb() {
         viewModel.fetchDataFromDatabase(requireContext())!!.observe(viewLifecycleOwner, Observer {
-            movieList = it as ArrayList<Search?>
+            movieList = it
             customMoviesAdapter.setData(movieList)
         })
 

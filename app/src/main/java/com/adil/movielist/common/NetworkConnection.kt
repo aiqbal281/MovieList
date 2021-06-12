@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.adil.movielist.common
 
 import android.content.Context
