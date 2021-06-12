@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="movieDetailsResponse"
+            type="com.adil.movielist.model.MovieDetailsResponse" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/DP_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_300"
+                    android:adjustViewBounds="true"
+                    app:imageUrl="@{movieDetailsResponse.poster}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="@dimen/DP_5"-->
+<!--                    android:text="@{movieDetailsResponse.title}"-->
+<!--                    android:textAppearance="@style/sp_14_text_black" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Plot "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.plot}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Genre "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.genre}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Released "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.released}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Runtime "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.runtime}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Year "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.year}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Production "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.production}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Director "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.director}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Writer "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.writer}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Actors "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.actors}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Language "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.language}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Country "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.country}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP_1"
+                    android:layout_marginEnd="@dimen/DP_10"
+                    android:layout_marginRight="@dimen/DP_10"
+                    android:alpha=".2"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/DP_5"
+                    android:layout_marginEnd="@dimen/DP_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/DP_5"
+                        android:text="Awards "
+                        android:textAppearance="@style/sp_12_text_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/DP_5"
+                        android:text="@{movieDetailsResponse.awards}"
+                        android:textAppearance="@style/sp_14_text_black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progressIndicator"
+            android:layout_width="@dimen/DP_50"
+            android:layout_height="@dimen/DP_50"
+            android:layout_gravity="center" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

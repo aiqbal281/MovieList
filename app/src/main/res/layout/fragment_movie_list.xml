@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.adil.movielist.viewModel.MovieListViewModel" />
+
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layoutMain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_35"
+                android:elevation="@dimen/DP_5"
+                android:layout_margin="@dimen/DP_10"
+                app:cardCornerRadius="@dimen/DP_15">
+
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconifiedByDefault="false"
+                    android:padding="@dimen/DP_5"
+                    app:queryHint="@string/search"
+                    android:id="@+id/searchView"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMovieList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp"
+                android:clipToPadding="false"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressIndicator"
+            android:layout_width="@dimen/DP_50"
+            android:layout_height="@dimen/DP_50"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_data"
+            android:textAppearance="@style/sp_14_text_black"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/txtNoData"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

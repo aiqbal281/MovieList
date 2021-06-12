@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MovieList</string>
+    <string name="no_data">Oops! No movie found</string>
+    <string name="no_internet">Oops! Your are offline</string>
+    <string name="search">Search here</string>
+</resources>

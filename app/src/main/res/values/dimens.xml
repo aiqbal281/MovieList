@@ -1,0 +1,127 @@
+<resources>
+
+    <dimen name="DP_1">1dp</dimen>
+    <dimen name="DP_2">2dp</dimen>
+    <dimen name="DP_3">3dp</dimen>
+    <dimen name="DP_4">4dp</dimen>
+    <dimen name="DP_5">5dp</dimen>
+    <dimen name="DP_6">6dp</dimen>
+    <dimen name="DP_7">7dp</dimen>
+    <dimen name="DP_8">8dp</dimen>
+    <dimen name="DP_9">9dp</dimen>
+    <dimen name="DP_10">10dp</dimen>
+    <dimen name="DP_11">11dp</dimen>
+    <dimen name="DP_12">12dp</dimen>
+    <dimen name="DP_13">13dp</dimen>
+    <dimen name="DP_14">14dp</dimen>
+    <dimen name="DP_15">15dp</dimen>
+    <dimen name="DP_16">16dp</dimen>
+    <dimen name="DP_17">17dp</dimen>
+    <dimen name="DP_18">18dp</dimen>
+    <dimen name="DP_19">19dp</dimen>
+    <dimen name="DP_20">20dp</dimen>
+    <dimen name="DP_21">21dp</dimen>
+    <dimen name="DP_22">22dp</dimen>
+    <dimen name="DP_23">23dp</dimen>
+    <dimen name="DP_24">24dp</dimen>
+    <dimen name="DP_25">25dp</dimen>
+    <dimen name="DP_26">26dp</dimen>
+    <dimen name="DP_27">27dp</dimen>
+    <dimen name="DP_28">28dp</dimen>
+    <dimen name="DP_29">29dp</dimen>
+    <dimen name="DP_30">30dp</dimen>
+    <dimen name="DP_31">31dp</dimen>
+    <dimen name="DP_32">32dp</dimen>
+    <dimen name="DP_33">33dp</dimen>
+    <dimen name="DP_34">34dp</dimen>
+    <dimen name="DP_35">35dp</dimen>
+    <dimen name="DP_36">36dp</dimen>
+    <dimen name="DP_37">37dp</dimen>
+    <dimen name="DP_38">38dp</dimen>
+    <dimen name="DP_39">39dp</dimen>
+    <dimen name="DP_40">40dp</dimen>
+    <dimen name="DP_41">41dp</dimen>
+    <dimen name="DP_42">42dp</dimen>
+    <dimen name="DP_43">43dp</dimen>
+    <dimen name="DP_44">44dp</dimen>
+    <dimen name="DP_45">45dp</dimen>
+    <dimen name="DP_46">46dp</dimen>
+    <dimen name="DP_47">47dp</dimen>
+    <dimen name="DP_48">48dp</dimen>
+    <dimen name="DP_49">49dp</dimen>
+    <dimen name="DP_50">50dp</dimen>
+    <dimen name="DP_51">51dp</dimen>
+    <dimen name="DP_52">52dp</dimen>
+    <dimen name="DP_53">53dp</dimen>
+    <dimen name="DP_54">54dp</dimen>
+    <dimen name="DP_55">55dp</dimen>
+    <dimen name="DP_56">56dp</dimen>
+    <dimen name="DP_57">57dp</dimen>
+    <dimen name="DP_58">58dp</dimen>
+    <dimen name="DP_59">59dp</dimen>
+    <dimen name="DP_60">60dp</dimen>
+    <dimen name="DP_61">61dp</dimen>
+    <dimen name="DP_62">62dp</dimen>
+    <dimen name="DP_63">63dp</dimen>
+    <dimen name="DP_64">64dp</dimen>
+    <dimen name="DP_65">65dp</dimen>
+    <dimen name="DP_66">66dp</dimen>
+    <dimen name="DP_67">67dp</dimen>
+    <dimen name="DP_68">68dp</dimen>
+    <dimen name="DP_69">69dp</dimen>
+    <dimen name="DP_70">70dp</dimen>
+    <dimen name="DP_71">71dp</dimen>
+    <dimen name="DP_72">72dp</dimen>
+    <dimen name="DP_73">73dp</dimen>
+    <dimen name="DP_74">74dp</dimen>
+    <dimen name="DP_75">75dp</dimen>
+    <dimen name="DP_76">76dp</dimen>
+    <dimen name="DP_77">77dp</dimen>
+    <dimen name="DP_78">78dp</dimen>
+    <dimen name="DP_79">79dp</dimen>
+    <dimen name="DP_80">80dp</dimen>
+    <dimen name="DP_81">81dp</dimen>
+    <dimen name="DP_82">82dp</dimen>
+    <dimen name="DP_83">83dp</dimen>
+    <dimen name="DP_84">84dp</dimen>
+    <dimen name="DP_85">85dp</dimen>
+    <dimen name="DP_86">86dp</dimen>
+    <dimen name="DP_87">87dp</dimen>
+    <dimen name="DP_88">88dp</dimen>
+    <dimen name="DP_89">89dp</dimen>
+    <dimen name="DP_90">90dp</dimen>
+    <dimen name="DP_91">91dp</dimen>
+    <dimen name="DP_92">92dp</dimen>
+    <dimen name="DP_93">93dp</dimen>
+    <dimen name="DP_94">94dp</dimen>
+    <dimen name="DP_95">95dp</dimen>
+    <dimen name="DP_96">96dp</dimen>
+    <dimen name="DP_97">97dp</dimen>
+    <dimen name="DP_98">98dp</dimen>
+    <dimen name="DP_99">99dp</dimen>
+    <dimen name="DP_100">100dp</dimen>
+    <dimen name="DP_120">120dp</dimen>
+    <dimen name="DP_130">130dp</dimen>
+    <dimen name="DP_133">133dp</dimen>
+    <dimen name="DP_140">140dp</dimen>
+    <dimen name="DP_150">150dp</dimen>
+    <dimen name="DP_160">160dp</dimen>
+    <dimen name="DP_180">180dp</dimen>
+    <dimen name="DP_200">200dp</dimen>
+    <dimen name="DP_300">300dp</dimen>
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+
+    <!--
+    This padding applies to both square and round screens. The total padding between the buttons
+    and the window insets is box_inset_layout_padding (above variable) on square screens and
+    inner_frame_layout_padding (below variable) on round screens.
+    -->
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+
+    <integer name="recycler_columns">3</integer>
+</resources>
+
