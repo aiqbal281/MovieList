@@ -1,2 +1,2 @@
 # MovieList
-MVVM+DataBinding+RoomDB+Pagination+Retrofit+,Live Data
+MVVM+DataBinding+RoomDB+Pagination+Retrofit+Live Data
